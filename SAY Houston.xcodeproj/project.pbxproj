@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96BCC6E8ADBBBF10F59A3E5C /* Pods_SAY_Houston.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9AC262B0DC65F654E4CBB2 /* Pods_SAY_Houston.framework */; };
 		DC10BD5D20C63E5900EE4428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10BD5C20C63E5900EE4428 /* AppDelegate.swift */; };
 		DC10BD5F20C63E5900EE4428 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10BD5E20C63E5900EE4428 /* ViewController.swift */; };
 		DC10BD6220C63E5900EE4428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC10BD6020C63E5900EE4428 /* Main.storyboard */; };
@@ -14,6 +15,26 @@
 		DC10BD6720C63E5B00EE4428 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC10BD6520C63E5B00EE4428 /* LaunchScreen.storyboard */; };
 		DC10BD7220C63E5B00EE4428 /* SAY_HoustonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10BD7120C63E5B00EE4428 /* SAY_HoustonTests.swift */; };
 		DC10BD7D20C63E5B00EE4428 /* SAY_HoustonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10BD7C20C63E5B00EE4428 /* SAY_HoustonUITests.swift */; };
+		DC20069021129E1600C61384 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC20068F21129E1600C61384 /* GoogleService-Info.plist */; };
+		DC220FA32113CCCA0021F11F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC220FA22113CCC90021F11F /* DataService.swift */; };
+		DC227120211529DC00AD6894 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22711F211529DC00AD6894 /* Survey.swift */; };
+		DC254FE62118FBE700BFDB3E /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC254FE52118FBE700BFDB3E /* Stories.swift */; };
+		DC254FE82118FBFD00BFDB3E /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC254FE72118FBFD00BFDB3E /* Story.swift */; };
+		DC2DEB562110F5B300BC6C59 /* donationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DEB552110F5B300BC6C59 /* donationMapViewController.swift */; };
+		DC2DFC9D2101606A00F4A491 /* supersignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DFC9C2101606A00F4A491 /* supersignViewController.swift */; };
+		DC2DFC9F2101608700F4A491 /* donateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DFC9E2101608700F4A491 /* donateViewController.swift */; };
+		DC2F33BE210BF39200CB0CF4 /* enterstoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2F33BD210BF39200CB0CF4 /* enterstoryViewController.swift */; };
+		DC2F33C0210BF54700CB0CF4 /* storyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2F33BF210BF54700CB0CF4 /* storyTableViewController.swift */; };
+		DC2F33C4210C040600CB0CF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2F33C3210C040600CB0CF4 /* Constants.swift */; };
+		DC76F60A20CB1B76003D512D /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76F60920CB1B76003D512D /* loginViewController.swift */; };
+		DC76F60C20CB1B97003D512D /* createaccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76F60B20CB1B97003D512D /* createaccountViewController.swift */; };
+		DC76F61020CB1BCD003D512D /* donationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76F60F20CB1BCD003D512D /* donationViewController.swift */; };
+		DC76F61220CB1BEA003D512D /* shelterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76F61120CB1BEA003D512D /* shelterViewController.swift */; };
+		DC76F61420CB1C08003D512D /* resourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76F61320CB1C08003D512D /* resourcesViewController.swift */; };
+		DC76F61620CB1C82003D512D /* aboutcarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76F61520CB1C82003D512D /* aboutcarViewController.swift */; };
+		DCBCEDA5210BBD7700DB5995 /* surveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBCEDA4210BBD7700DB5995 /* surveyViewController.swift */; };
+		DCEE701F2102DE6F0018A29A /* superstoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE701E2102DE6F0018A29A /* superstoriesViewController.swift */; };
+		DCEE70212102DE8B0018A29A /* supersurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE70202102DE8B0018A29A /* supersurveyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +54,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DCBCEDA3210BBD1A00DB5995 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		172A62EAC724F86FC8D8E766 /* Pods-SAY Houston.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAY Houston.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SAY Houston/Pods-SAY Houston.debug.xcconfig"; sourceTree = "<group>"; };
+		7A9AC262B0DC65F654E4CBB2 /* Pods_SAY_Houston.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SAY_Houston.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A77E2DD04E53820BD276356E /* Pods-SAY Houston.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAY Houston.release.xcconfig"; path = "Pods/Target Support Files/Pods-SAY Houston/Pods-SAY Houston.release.xcconfig"; sourceTree = "<group>"; };
 		DC10BD5920C63E5900EE4428 /* SAY Houston.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SAY Houston.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC10BD5C20C63E5900EE4428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC10BD5E20C63E5900EE4428 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +84,26 @@
 		DC10BD7820C63E5B00EE4428 /* SAY HoustonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SAY HoustonUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC10BD7C20C63E5B00EE4428 /* SAY_HoustonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAY_HoustonUITests.swift; sourceTree = "<group>"; };
 		DC10BD7E20C63E5B00EE4428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC20068F21129E1600C61384 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DC220FA22113CCC90021F11F /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		DC22711F211529DC00AD6894 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		DC254FE52118FBE700BFDB3E /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
+		DC254FE72118FBFD00BFDB3E /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		DC2DEB552110F5B300BC6C59 /* donationMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = donationMapViewController.swift; sourceTree = "<group>"; };
+		DC2DFC9C2101606A00F4A491 /* supersignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = supersignViewController.swift; sourceTree = "<group>"; };
+		DC2DFC9E2101608700F4A491 /* donateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = donateViewController.swift; sourceTree = "<group>"; };
+		DC2F33BD210BF39200CB0CF4 /* enterstoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enterstoryViewController.swift; sourceTree = "<group>"; };
+		DC2F33BF210BF54700CB0CF4 /* storyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyTableViewController.swift; sourceTree = "<group>"; };
+		DC2F33C3210C040600CB0CF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DC76F60920CB1B76003D512D /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		DC76F60B20CB1B97003D512D /* createaccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createaccountViewController.swift; sourceTree = "<group>"; };
+		DC76F60F20CB1BCD003D512D /* donationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = donationViewController.swift; sourceTree = "<group>"; };
+		DC76F61120CB1BEA003D512D /* shelterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shelterViewController.swift; sourceTree = "<group>"; };
+		DC76F61320CB1C08003D512D /* resourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resourcesViewController.swift; sourceTree = "<group>"; };
+		DC76F61520CB1C82003D512D /* aboutcarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutcarViewController.swift; sourceTree = "<group>"; };
+		DCBCEDA4210BBD7700DB5995 /* surveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surveyViewController.swift; sourceTree = "<group>"; };
+		DCEE701E2102DE6F0018A29A /* superstoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = superstoriesViewController.swift; sourceTree = "<group>"; };
+		DCEE70202102DE8B0018A29A /* supersurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = supersurveyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BCC6E8ADBBBF10F59A3E5C /* Pods_SAY_Houston.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +132,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		710D70CCB6AB01DF75408768 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A9AC262B0DC65F654E4CBB2 /* Pods_SAY_Houston.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DC10BD5020C63E5900EE4428 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +147,8 @@
 				DC10BD7020C63E5B00EE4428 /* SAY HoustonTests */,
 				DC10BD7B20C63E5B00EE4428 /* SAY HoustonUITests */,
 				DC10BD5A20C63E5900EE4428 /* Products */,
+				E7E95FD1CFC7CA127140292C /* Pods */,
+				710D70CCB6AB01DF75408768 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +167,30 @@
 			children = (
 				DC10BD5C20C63E5900EE4428 /* AppDelegate.swift */,
 				DC10BD5E20C63E5900EE4428 /* ViewController.swift */,
+				DC220FA22113CCC90021F11F /* DataService.swift */,
 				DC10BD6020C63E5900EE4428 /* Main.storyboard */,
 				DC10BD6320C63E5B00EE4428 /* Assets.xcassets */,
 				DC10BD6520C63E5B00EE4428 /* LaunchScreen.storyboard */,
+				DC20068F21129E1600C61384 /* GoogleService-Info.plist */,
 				DC10BD6820C63E5B00EE4428 /* Info.plist */,
+				DC76F60920CB1B76003D512D /* loginViewController.swift */,
+				DC76F60B20CB1B97003D512D /* createaccountViewController.swift */,
+				DCBCEDA4210BBD7700DB5995 /* surveyViewController.swift */,
+				DC76F60F20CB1BCD003D512D /* donationViewController.swift */,
+				DC76F61120CB1BEA003D512D /* shelterViewController.swift */,
+				DC76F61320CB1C08003D512D /* resourcesViewController.swift */,
+				DC76F61520CB1C82003D512D /* aboutcarViewController.swift */,
+				DC2DFC9C2101606A00F4A491 /* supersignViewController.swift */,
+				DC2DFC9E2101608700F4A491 /* donateViewController.swift */,
+				DCEE701E2102DE6F0018A29A /* superstoriesViewController.swift */,
+				DC2F33BD210BF39200CB0CF4 /* enterstoryViewController.swift */,
+				DCEE70202102DE8B0018A29A /* supersurveyViewController.swift */,
+				DC2F33BF210BF54700CB0CF4 /* storyTableViewController.swift */,
+				DC2F33C3210C040600CB0CF4 /* Constants.swift */,
+				DC2DEB552110F5B300BC6C59 /* donationMapViewController.swift */,
+				DC22711F211529DC00AD6894 /* Survey.swift */,
+				DC254FE52118FBE700BFDB3E /* Stories.swift */,
+				DC254FE72118FBFD00BFDB3E /* Story.swift */,
 			);
 			path = "SAY Houston";
 			sourceTree = "<group>";
@@ -125,6 +213,15 @@
 			path = "SAY HoustonUITests";
 			sourceTree = "<group>";
 		};
+		E7E95FD1CFC7CA127140292C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				172A62EAC724F86FC8D8E766 /* Pods-SAY Houston.debug.xcconfig */,
+				A77E2DD04E53820BD276356E /* Pods-SAY Houston.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC10BD8120C63E5B00EE4428 /* Build configuration list for PBXNativeTarget "SAY Houston" */;
 			buildPhases = (
+				EFCBB413D5C93F5E4B4B4EEB /* [CP] Check Pods Manifest.lock */,
 				DC10BD5520C63E5900EE4428 /* Sources */,
 				DC10BD5620C63E5900EE4428 /* Frameworks */,
 				DC10BD5720C63E5900EE4428 /* Resources */,
+				DCBCEDA3210BBD1A00DB5995 /* Embed Frameworks */,
+				A60DAD96EA7CCC1B22ADEFBD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC10BD6720C63E5B00EE4428 /* LaunchScreen.storyboard in Resources */,
+				DC20069021129E1600C61384 /* GoogleService-Info.plist in Resources */,
 				DC10BD6420C63E5B00EE4428 /* Assets.xcassets in Resources */,
 				DC10BD6220C63E5900EE4428 /* Main.storyboard in Resources */,
 			);
@@ -251,13 +352,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A60DAD96EA7CCC1B22ADEFBD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SAY Houston/Pods-SAY Houston-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/ResearchKit/ResearchKit.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ResearchKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SAY Houston/Pods-SAY Houston-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFCBB413D5C93F5E4B4B4EEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SAY Houston-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC10BD5520C63E5900EE4428 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCBCEDA5210BBD7700DB5995 /* surveyViewController.swift in Sources */,
+				DC2F33C4210C040600CB0CF4 /* Constants.swift in Sources */,
+				DCEE70212102DE8B0018A29A /* supersurveyViewController.swift in Sources */,
+				DC2F33C0210BF54700CB0CF4 /* storyTableViewController.swift in Sources */,
+				DC76F60C20CB1B97003D512D /* createaccountViewController.swift in Sources */,
+				DC2DFC9D2101606A00F4A491 /* supersignViewController.swift in Sources */,
+				DC76F61420CB1C08003D512D /* resourcesViewController.swift in Sources */,
+				DC76F61620CB1C82003D512D /* aboutcarViewController.swift in Sources */,
+				DC2F33BE210BF39200CB0CF4 /* enterstoryViewController.swift in Sources */,
+				DC220FA32113CCCA0021F11F /* DataService.swift in Sources */,
 				DC10BD5F20C63E5900EE4428 /* ViewController.swift in Sources */,
+				DC2DFC9F2101608700F4A491 /* donateViewController.swift in Sources */,
+				DCEE701F2102DE6F0018A29A /* superstoriesViewController.swift in Sources */,
+				DC254FE62118FBE700BFDB3E /* Stories.swift in Sources */,
+				DC254FE82118FBFD00BFDB3E /* Story.swift in Sources */,
+				DC76F61220CB1BEA003D512D /* shelterViewController.swift in Sources */,
 				DC10BD5D20C63E5900EE4428 /* AppDelegate.swift in Sources */,
+				DC76F61020CB1BCD003D512D /* donationViewController.swift in Sources */,
+				DC227120211529DC00AD6894 /* Survey.swift in Sources */,
+				DC2DEB562110F5B300BC6C59 /* donationMapViewController.swift in Sources */,
+				DC76F60A20CB1B76003D512D /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,9 +595,12 @@
 		};
 		DC10BD8220C63E5B00EE4428 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 172A62EAC724F86FC8D8E766 /* Pods-SAY Houston.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23232LU5XG;
 				INFOPLIST_FILE = "SAY Houston/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -445,9 +615,12 @@
 		};
 		DC10BD8320C63E5B00EE4428 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A77E2DD04E53820BD276356E /* Pods-SAY Houston.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 23232LU5XG;
 				INFOPLIST_FILE = "SAY Houston/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
