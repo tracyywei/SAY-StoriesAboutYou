@@ -9,10 +9,13 @@
 import UIKit
 
 class supersignViewController: UIViewController {
-
+    @IBOutlet weak var superUser: UITextField!
+    @IBOutlet weak var superPass: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
 
@@ -25,7 +28,27 @@ class supersignViewController: UIViewController {
     }
     
     @IBAction func goSuperSee(_ sender: Any) {
+        
+        if(superUser.text == "gamechangers" && superPass.text == "gamechangers"){
         performSegue(withIdentifier: "entersupersee", sender: self)
+        }
+        else{
+            let alert2 = UIAlertController(title: "ERROR", message: "Incorrect username or password. Please try again.", preferredStyle: UIAlertControllerStyle.alert)
+            alert2.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                switch action.style{
+                case .default:
+                    print("default")
+                    
+                case .cancel:
+                    print("cancel")
+                    
+                case .destructive:
+                    print("destructive")
+                    
+                    
+                }}))
+            self.present(alert2, animated: true, completion: nil)
+        }
     }
     
     @IBAction func goBackLogin(_ sender: Any) {

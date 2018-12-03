@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
 
-
+    @IBAction func logout(_ sender: Any) {
+        try! Auth.auth().signOut()
+        self.dismiss(animated: false, completion: nil)    }
+    
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label3: UILabel!
@@ -155,16 +159,18 @@ class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             label5.text = ""
             label6.text = ""
             
+            
             selectedOption = 5
         }
         else if(row == 6){
             mylabel.text = "Money"
-            label1.text = ""
+            label1.text = "Click 'See Map'"
             label2.text = ""
             label3.text = ""
             label4.text = ""
             label5.text = ""
             label6.text = ""
+           
             
             selectedOption = 6
         }
@@ -204,9 +210,9 @@ class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
         else if(row == 10){
             mylabel.text = "Volunteer Opportunities"
-            label1.text = ""
-            label2.text = ""
-            label3.text = ""
+            label1.text = "Any one of the locations"
+            label2.text = "listed on the donations page"
+            label3.text = "would love to hear from you!"
             label4.text = ""
             label5.text = ""
             label6.text = ""
@@ -255,6 +261,22 @@ class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     var categoryName = ""
     @IBAction func seeMap(_ sender: UIButton) {
+        
+        let alert2 = UIAlertController(title: "ERROR", message: "Please make sure you have selected a category before viewing the map", preferredStyle: UIAlertControllerStyle.alert)
+        alert2.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            switch action.style{
+            case .default:
+                print("default")
+                
+            case .cancel:
+                print("cancel")
+                
+            case .destructive:
+                print("destructive")
+                
+                
+            }}))
+        
         if(self.selectedOption == 1){
             self.categoryName = "Food"
         }
@@ -272,7 +294,21 @@ class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
         else if(self.selectedOption == 6){
             self.categoryName = "Money"
-        }
+            let alert2 = UIAlertController(title: "Children At Risk", message: "Donations at Children At Risk are greatly appreciated and help keep this app running. Thank you!", preferredStyle: UIAlertControllerStyle.alert)
+            alert2.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                switch action.style{
+                case .default:
+                    print("default")
+                    
+                case .cancel:
+                    print("cancel")
+                    
+                case .destructive:
+                    print("destructive")
+                    
+                    
+                }}))
+            self.present(alert2, animated: true, completion: nil)        }
         else if(self.selectedOption == 7){
             self.categoryName = "Medical Supplies"
         }
@@ -284,15 +320,36 @@ class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
         else if(self.selectedOption == 10){
             self.categoryName = "Volunteer Opportunities"
-        }
+            let alert2 = UIAlertController(title: "Volunteer!", message: "Any one of the locations listed on the donations page would love to hear from you!", preferredStyle: UIAlertControllerStyle.alert)
+            alert2.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                switch action.style{
+                case .default:
+                    print("default")
+                    
+                case .cancel:
+                    print("cancel")
+                    
+                case .destructive:
+                    print("destructive")
+                    
+                    
+                }}))
+            self.present(alert2, animated: true, completion: nil)        }
         else if(self.selectedOption == 11){
-            let alert = UIAlertController(title: "ERROR", message: "Please make sure you have selected a category before viewing the map", preferredStyle: .alert)
+            /*let alert = UIAlertController(title: "ERROR", message: "Please make sure you have selected a category before viewing the map", preferredStyle: .alert)
             let action = UIAlertAction(title: "Ok", style: .default, handler: nil) {
                 (action)in print("Ok") }
             alert.addAction(action)
-            present(alert, animated: true, completion: nil)
+            present(alert, animated: true, completion: nil)*/
+            
+            
+            self.present(alert2, animated: true, completion: nil)
+        }
+        else {
+            self.present(alert2, animated: true, completion: nil)
         }
          performSegue(withIdentifier: "seeMap", sender: self)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!)

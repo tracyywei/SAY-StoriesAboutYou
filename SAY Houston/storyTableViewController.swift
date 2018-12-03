@@ -7,201 +7,95 @@
 //
 
 import UIKit
+import Firebase
 
 class storyTableViewController: UITableViewController {
     
-    @IBOutlet weak var totalLikes: UILabel!
+    let ref = Database.database().reference(withPath: "stories")
     
-    @IBOutlet weak var zipcodeField: UILabel!
-    @IBOutlet weak var storyField: UITextView!
-    @IBOutlet weak var heartImage: UIImageView!
-    @IBOutlet weak var disasterCategory: UILabel!
     
     @IBAction func addStory(_ sender: Any) {
-        performSegue(withIdentifier: "addStory", sender: self)
+        performSegue(withIdentifier: "addsStory", sender: self)
     }
+    
     
     @IBAction func logout(_ sender: Any) {
-        // unauth() is the logout method for the current user.
+        try! Auth.auth().signOut()
+        self.dismiss(animated: false, completion: nil)
         
-        DataService.dataService.CURRENT_USER_REF.unauth()
-        
-        // Remove the user's uid from storage.
-        
-        NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
-        
-        // Head back to Login!
-        
-        let loginViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Login")
-        UIApplication.sharedApplication().keyWindow?.rootViewController = loginViewController
     }
     
+    
+    
     var stories = [Story]()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DataService.dataService.STORY_REF.observeEventType(.Value, withBlock: { snapshot in
+        let cellNib = UINib(nibName: "storyTableViewCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: "storyTableViewCell")
+
+        observeStories()
+        
+    }
+    
+    func observeStories() {
+        let storiesRef = Database.database().reference().child("stories")
+        
+        storiesRef.observe(.value, with: { snapshot in
             
-            // The snapshot is a current look at our jokes data.
+            var tempStories = [Story]()
             
-            print(snapshot.value)
-            
-            self.stories = []
-            
-            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
-                
-                for snap in snapshots {
+            for child in snapshot.children {
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String:Any],
+                    let story = dict["story"] as? String,
+                    let zipcode = dict["zipcode"] as? String,
+                    let disaster = dict["disaster"] as? String,
+                    let hearts = dict["hearts"] as? Int,
+                    let timestamp = dict["timestamp"] as? Double {
                     
-                    // Make our jokes array for the tableView.
+                    let story = Story(story: story, zipcode: zipcode, disaster: disaster, hearts:hearts, timestamp: timestamp)
+                    tempStories.append(story)
                     
-                    if let postDictionary = snap.value as? Dictionary<String, AnyObject> {
-                        let key = snap.key
-                        let story = Story(key: key, dictionary: postDictionary)
-                        
-                        // Items are returned chronologically, but it's more fun with the newest jokes first.
-                        
-                        self.stories.insert(joke, atIndex: 0)
-                    }
                 }
-                
             }
             
-            // Be sure that the tableView updates when there is new data.
-            
+            self.stories = tempStories
             self.tableView.reloadData()
+            
         })
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-    
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        
-        return 1
-    }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return stories.count
     }
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "storyTableViewCell", for: indexPath) as! storyTableViewCell
+        let story: Story
+        
+        
+        story = stories[indexPath.row]
+        
+        
+        cell.storyText.text = story.story
+        cell.zipcodeText.text = story.zipcode
+        cell.disasterText.text = story.disaster
+        cell.heartsCount.text = "\(story.hearts)"
+        
+        
+        return cell
+    }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let story = stories[indexPath.row]
-        
-        // We are using a custom cell.
-        
-        if let cell = tableView.dequeueReusableCellWithIdentifier("StoryCellTableViewCell") as? StoryCellTableViewCell {
-            
-            // Send the single joke to configureCell() in JokeCellTableViewCell.
-            
-            cell.configureCell(story)
-            
-            return cell
-            
-        } else {
-            
-            return StoryCellTableViewCell()
-            
-        }
-    }
-   
-    func configureCell(story: Story) {
-        self.story = story
-        
-        // Set the labels and textView.
-        
-        self.storyField.text = story.storyText
-        self.totalLikes.text = "\(story.storyVotes)"
-        self.zipcodeField.text = story.username
-        
-        // Set "votes" as a child of the current user in Firebase and save the joke's key in votes as a boolean.
-        
-        storyRef = DataService.dataService.CURRENT_USER_REF.childByAppendingPath("likes").childByAppendingPath(story.storyKey)
-        
-        // observeSingleEventOfType() listens for the thumb to be tapped, by any user, on any device.
-        
-        voteRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
-            
-            // Set the thumb image.
-            
-            if let thumbsUpDown = snapshot.value as? NSNull {
-                
-                // Current user hasn't voted for the joke... yet.
-                
-                print(thumbsUpDown)
-                self.thumbVoteImage.image = UIImage(named: "thumb-down")
-            } else {
-                
-                // Current user voted for the joke!
-                
-                self.heartImage.image = UIImage(named: "heart")
-            }
-        })
-        
-        var story: Story!
-        var likeRef: Firebase!
-        
-        override func awakeFromNib() {
-            super.awakeFromNib()
-            
-            // UITapGestureRecognizer is set programatically.
-            
-            let tap = UITapGestureRecognizer(target: self, action: "likeTapped:")
-            tap.numberOfTapsRequired = 1
-            thumbVoteImage.addGestureRecognizer(tap)
-            thumbVoteImage.userInteractionEnabled = true
-        }
-        
-        func likeTapped(sender: UITapGestureRecognizer) {
-            
-            // observeSingleEventOfType listens for a tap by the current user.
-            
-            likeRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
-                
-                if let thumbsUpDown = snapshot.value as? NSNull {
-                    print(thumbsUpDown)
-                    self.thumbVoteImage.image = UIImage(named: "thumb-down")
-                    
-                    // addSubtractVote(), in Joke.swift, handles the vote.
-                    
-                    self.story.addSubtractVote(true)
-                    
-                    // setValue saves the vote as true for the current user.
-                    // voteRef is a reference to the user's "votes" path.
-                    
-                    self.likeeRef.setValue(true)
-                } else {
-                    self.thumbVoteImage.image = UIImage(named: "thumb-up")
-                    self.story.addSubtractVote(false)
-                    self.likeRef.removeValue()
-                }
-                
-            })
-        }
-    }
+    
     
 
     /*
@@ -259,4 +153,8 @@ class storyTableViewController: UITableViewController {
     }
     */
 
+
+
 }
+
+

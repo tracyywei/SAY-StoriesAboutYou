@@ -7,20 +7,34 @@
 //
 
 import UIKit
-import ResearchKit
+import WebKit
+import FirebaseAuth
 
-class surveyViewController: UIViewController {
+class surveyViewController: UIViewController , WKNavigationDelegate {
+    var webView: WKWebView!
+    @IBOutlet weak var SurveyWebView: WKWebView!
+    
+    override func loadView() {
+        webView = WKWebView()
+        webView.navigationDelegate = self
+        view = webView
+    }
 
-    @IBAction func takeSurvey(_ sender: Any) {
-        let taskViewController = ORKTaskViewController(task: Survey, taskRun: nil)
+    @IBAction func logout(_ sender: Any) {
+        try! Auth.auth().signOut()
+        self.dismiss(animated: false, completion: nil)    }
+    
+    
+    /* @IBAction func takeSurvey(_ sender: Any) {
         taskViewController.delegate = self
         present(taskViewController, animated: true, completion: nil)
-    }
+    }*/
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let url = URL(string: "https://docs.google.com/forms/d/e/1FAIpQLSeAZf_aseae_n5kWm4G7jhArulFIyzpnsTk6v4wsjAwKxPhmA/viewform?usp=sf_link")
+        webView.load(URLRequest(url: url!))
         
-
         // Do any additional setup after loading the view.
     }
 
@@ -28,6 +42,8 @@ class surveyViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
 
     /*
@@ -41,3 +57,10 @@ class surveyViewController: UIViewController {
     */
 
 }
+
+    
+    
+   
+    
+
+

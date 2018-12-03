@@ -7,15 +7,25 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class loginViewController: UIViewController {
 
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     
+    @IBAction func login(_ sender: UIButton) {
+        handleSignIn()
+    }
+    
+    @IBOutlet weak var verify: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        verify.text = ""
+        resetForm()
+        self.hideKeyboardWhenTappedAround() 
         // Do any additional setup after loading the view.
     }
 
@@ -24,27 +34,46 @@ class loginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // If we have the uid stored, the user is already logger in - no need to sign in again!
         
-        if NSUserDefaults.standardUserDefaults().valueForKey("uid") != nil && DataService.dataService.CURRENT_USER_REF.authData != nil {
-            self.performSegueWithIdentifier("CurrentlyLoggedIn", sender: nil)
-        }
     }
+    
+    @objc func handleSignIn() {
+        guard let email = usernameText.text else { return }
+        guard let pass = passwordText.text else { return }
+        
+        Auth.auth().signIn(withEmail: email, password: pass) { user, error in
+            if error == nil && user != nil {
+                print("Success")
+                self.performSegue(withIdentifier: "enterHome", sender: UIButton())
+            }
+            else {
+                print("Error logging in: \(error!.localizedDescription)")
+                self.verify.text = "\(error!.localizedDescription)"
+                self.resetForm()
+            }
+        }
+    
+    
+    }
+    
+
+    func resetForm() {
+        usernameText.text = ""
+    }
+    
     
     @IBAction func closeLogin(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func goHome(_ sender: Any) {
-        performSegue(withIdentifier: "enterhome", sender: self)
-    }
     
     @IBAction func accountCreate(_ sender: Any) {
         performSegue(withIdentifier: "accountCreate", sender: self)
     }
+    
     /*
     // MARK: - Navigation
 
@@ -55,5 +84,6 @@ class loginViewController: UIViewController {
     }
     */
 
-}
+
     
+}

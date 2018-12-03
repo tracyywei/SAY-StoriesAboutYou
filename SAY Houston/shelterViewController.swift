@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import FirebaseAuth
 
 final class shelterAnnotation: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D;
@@ -31,6 +32,9 @@ final class shelterAnnotation: NSObject, MKAnnotation {
 
 class shelterViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
+    @IBAction func logout(_ sender: Any) {
+        try! Auth.auth().signOut()
+        self.dismiss(animated: false, completion: nil)    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

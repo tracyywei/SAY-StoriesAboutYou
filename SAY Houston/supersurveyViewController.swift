@@ -22,7 +22,7 @@ class supersurveyViewController: UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
         
         // 1
-        let url = URL(string: "https://docs.google.com/spreadsheets/d/1VMTbP3TVy9zXt-zfPbhgriM-RXb_c1pJFN4XU1f4Aww/edit?usp=sharing")!
+        let url = URL(string: "https://docs.google.com/spreadsheets/d/1NVBQmaby4RtUGPv-C7gi6-SErKB5vrpwEmlexcsH9BI/edit?usp=sharing")!
         webView.load(URLRequest(url: url))
         
         // 2

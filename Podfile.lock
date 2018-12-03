@@ -63,14 +63,12 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - ResearchKit (1.5.2)
 
 DEPENDENCIES:
   - Firebase
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
-  - ResearchKit (~> 1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -86,7 +84,6 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
-    - ResearchKit
 
 SPEC CHECKSUMS:
   Firebase: 8c957f9cb3852b519180fb378801b7eeeba4d288
@@ -101,8 +98,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  ResearchKit: a5770681dd61afddd3d1f24d232b9abf00cba454
 
-PODFILE CHECKSUM: 97debc96bfbff2d806ea0655283160d82182ce06
+PODFILE CHECKSUM: 8b1fa95d11cdd52b36bfe80bfafd9ceb4cbafb99
 
 COCOAPODS: 1.5.3

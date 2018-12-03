@@ -7,13 +7,9 @@
 //
 
 import Foundation
-import ResearchKit
 
-public var Survey: ORKOrderedTask {
     
-    var steps = [ORKStep]()
-    
-    let instructionStep = ORKInstructionStep(identifier: "IntroStep")
+    /* let instructionStep = ORKInstructionStep(identifier: "IntroStep")
     instructionStep.title = "Survey"
     instructionStep.text = "The following survey is intended for children only. For data purposes, please don't submit more than one response per person. All answers submitted will not be related to you in any way. All answers will remain anonymous."
     steps += [instructionStep]
@@ -38,10 +34,10 @@ public var Survey: ORKOrderedTask {
     let completionStep = ORKCompletionStep(identifier: "SummaryStep")
     completionStep.title = "Thank You!!"
     completionStep.text = "You have completed the survey"
-    steps += [completionStep]
+    steps += [completionStep]*/
     
-    return ORKOrderedTask(identifier: "Survey", steps: steps)
-}
+    // return ORKOrderedTask(identifier: "Survey", steps: steps)
+// }
 
 
 
@@ -65,6 +61,7 @@ let moodChoice : [ORKImageChoice] = moodImages.map {
 let answerFormat: ORKImageChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: moodChoice)
 let moodQuestionStep = ORKQuestionStep(identifier: "MoodStep", title: moodQuestion, answer: answerFormat)
 steps += [moodQuestionStep]*/
+
 
 
 

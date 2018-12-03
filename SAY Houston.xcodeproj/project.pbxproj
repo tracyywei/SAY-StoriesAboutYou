@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		96BCC6E8ADBBBF10F59A3E5C /* Pods_SAY_Houston.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9AC262B0DC65F654E4CBB2 /* Pods_SAY_Houston.framework */; };
+		DC0F4686218FEEEF00023534 /* storyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0F4684218FEEEF00023534 /* storyTableViewCell.swift */; };
+		DC0F4687218FEEEF00023534 /* storyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC0F4685218FEEEF00023534 /* storyTableViewCell.xib */; };
+		DC107408218D379900FB8E30 /* LikesControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC107407218D379900FB8E30 /* LikesControl.swift */; };
 		DC10BD5D20C63E5900EE4428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10BD5C20C63E5900EE4428 /* AppDelegate.swift */; };
 		DC10BD5F20C63E5900EE4428 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10BD5E20C63E5900EE4428 /* ViewController.swift */; };
 		DC10BD6220C63E5900EE4428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC10BD6020C63E5900EE4428 /* Main.storyboard */; };
@@ -15,15 +18,12 @@
 		DC10BD6720C63E5B00EE4428 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC10BD6520C63E5B00EE4428 /* LaunchScreen.storyboard */; };
 		DC10BD7220C63E5B00EE4428 /* SAY_HoustonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10BD7120C63E5B00EE4428 /* SAY_HoustonTests.swift */; };
 		DC10BD7D20C63E5B00EE4428 /* SAY_HoustonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10BD7C20C63E5B00EE4428 /* SAY_HoustonUITests.swift */; };
+		DC134FB6218E901B003DCA0E /* enterstoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC134FB5218E901B003DCA0E /* enterstoryViewController.swift */; };
 		DC20069021129E1600C61384 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC20068F21129E1600C61384 /* GoogleService-Info.plist */; };
-		DC220FA32113CCCA0021F11F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC220FA22113CCC90021F11F /* DataService.swift */; };
-		DC227120211529DC00AD6894 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22711F211529DC00AD6894 /* Survey.swift */; };
-		DC254FE62118FBE700BFDB3E /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC254FE52118FBE700BFDB3E /* Stories.swift */; };
 		DC254FE82118FBFD00BFDB3E /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC254FE72118FBFD00BFDB3E /* Story.swift */; };
 		DC2DEB562110F5B300BC6C59 /* donationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DEB552110F5B300BC6C59 /* donationMapViewController.swift */; };
 		DC2DFC9D2101606A00F4A491 /* supersignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DFC9C2101606A00F4A491 /* supersignViewController.swift */; };
 		DC2DFC9F2101608700F4A491 /* donateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DFC9E2101608700F4A491 /* donateViewController.swift */; };
-		DC2F33BE210BF39200CB0CF4 /* enterstoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2F33BD210BF39200CB0CF4 /* enterstoryViewController.swift */; };
 		DC2F33C0210BF54700CB0CF4 /* storyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2F33BF210BF54700CB0CF4 /* storyTableViewController.swift */; };
 		DC2F33C4210C040600CB0CF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2F33C3210C040600CB0CF4 /* Constants.swift */; };
 		DC76F60A20CB1B76003D512D /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76F60920CB1B76003D512D /* loginViewController.swift */; };
@@ -71,6 +71,9 @@
 		172A62EAC724F86FC8D8E766 /* Pods-SAY Houston.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAY Houston.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SAY Houston/Pods-SAY Houston.debug.xcconfig"; sourceTree = "<group>"; };
 		7A9AC262B0DC65F654E4CBB2 /* Pods_SAY_Houston.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SAY_Houston.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77E2DD04E53820BD276356E /* Pods-SAY Houston.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAY Houston.release.xcconfig"; path = "Pods/Target Support Files/Pods-SAY Houston/Pods-SAY Houston.release.xcconfig"; sourceTree = "<group>"; };
+		DC0F4684218FEEEF00023534 /* storyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyTableViewCell.swift; sourceTree = "<group>"; };
+		DC0F4685218FEEEF00023534 /* storyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = storyTableViewCell.xib; sourceTree = "<group>"; };
+		DC107407218D379900FB8E30 /* LikesControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesControl.swift; sourceTree = "<group>"; };
 		DC10BD5920C63E5900EE4428 /* SAY Houston.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SAY Houston.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC10BD5C20C63E5900EE4428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC10BD5E20C63E5900EE4428 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,15 +87,12 @@
 		DC10BD7820C63E5B00EE4428 /* SAY HoustonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SAY HoustonUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC10BD7C20C63E5B00EE4428 /* SAY_HoustonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAY_HoustonUITests.swift; sourceTree = "<group>"; };
 		DC10BD7E20C63E5B00EE4428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC134FB5218E901B003DCA0E /* enterstoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enterstoryViewController.swift; sourceTree = "<group>"; };
 		DC20068F21129E1600C61384 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DC220FA22113CCC90021F11F /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		DC22711F211529DC00AD6894 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
-		DC254FE52118FBE700BFDB3E /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		DC254FE72118FBFD00BFDB3E /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		DC2DEB552110F5B300BC6C59 /* donationMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = donationMapViewController.swift; sourceTree = "<group>"; };
 		DC2DFC9C2101606A00F4A491 /* supersignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = supersignViewController.swift; sourceTree = "<group>"; };
 		DC2DFC9E2101608700F4A491 /* donateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = donateViewController.swift; sourceTree = "<group>"; };
-		DC2F33BD210BF39200CB0CF4 /* enterstoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enterstoryViewController.swift; sourceTree = "<group>"; };
 		DC2F33BF210BF54700CB0CF4 /* storyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyTableViewController.swift; sourceTree = "<group>"; };
 		DC2F33C3210C040600CB0CF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DC76F60920CB1B76003D512D /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
@@ -167,7 +167,6 @@
 			children = (
 				DC10BD5C20C63E5900EE4428 /* AppDelegate.swift */,
 				DC10BD5E20C63E5900EE4428 /* ViewController.swift */,
-				DC220FA22113CCC90021F11F /* DataService.swift */,
 				DC10BD6020C63E5900EE4428 /* Main.storyboard */,
 				DC10BD6320C63E5B00EE4428 /* Assets.xcassets */,
 				DC10BD6520C63E5B00EE4428 /* LaunchScreen.storyboard */,
@@ -183,14 +182,15 @@
 				DC2DFC9C2101606A00F4A491 /* supersignViewController.swift */,
 				DC2DFC9E2101608700F4A491 /* donateViewController.swift */,
 				DCEE701E2102DE6F0018A29A /* superstoriesViewController.swift */,
-				DC2F33BD210BF39200CB0CF4 /* enterstoryViewController.swift */,
 				DCEE70202102DE8B0018A29A /* supersurveyViewController.swift */,
 				DC2F33BF210BF54700CB0CF4 /* storyTableViewController.swift */,
 				DC2F33C3210C040600CB0CF4 /* Constants.swift */,
 				DC2DEB552110F5B300BC6C59 /* donationMapViewController.swift */,
-				DC22711F211529DC00AD6894 /* Survey.swift */,
-				DC254FE52118FBE700BFDB3E /* Stories.swift */,
 				DC254FE72118FBFD00BFDB3E /* Story.swift */,
+				DC107407218D379900FB8E30 /* LikesControl.swift */,
+				DC134FB5218E901B003DCA0E /* enterstoryViewController.swift */,
+				DC0F4684218FEEEF00023534 /* storyTableViewCell.swift */,
+				DC0F4685218FEEEF00023534 /* storyTableViewCell.xib */,
 			);
 			path = "SAY Houston";
 			sourceTree = "<group>";
@@ -333,6 +333,7 @@
 				DC20069021129E1600C61384 /* GoogleService-Info.plist in Resources */,
 				DC10BD6420C63E5B00EE4428 /* Assets.xcassets in Resources */,
 				DC10BD6220C63E5900EE4428 /* Main.storyboard in Resources */,
+				DC0F4687218FEEEF00023534 /* storyTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +363,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SAY Houston/Pods-SAY Houston-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/ResearchKit/ResearchKit.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -370,7 +370,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ResearchKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -405,24 +404,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCBCEDA5210BBD7700DB5995 /* surveyViewController.swift in Sources */,
+				DC134FB6218E901B003DCA0E /* enterstoryViewController.swift in Sources */,
 				DC2F33C4210C040600CB0CF4 /* Constants.swift in Sources */,
 				DCEE70212102DE8B0018A29A /* supersurveyViewController.swift in Sources */,
 				DC2F33C0210BF54700CB0CF4 /* storyTableViewController.swift in Sources */,
+				DC107408218D379900FB8E30 /* LikesControl.swift in Sources */,
 				DC76F60C20CB1B97003D512D /* createaccountViewController.swift in Sources */,
 				DC2DFC9D2101606A00F4A491 /* supersignViewController.swift in Sources */,
 				DC76F61420CB1C08003D512D /* resourcesViewController.swift in Sources */,
 				DC76F61620CB1C82003D512D /* aboutcarViewController.swift in Sources */,
-				DC2F33BE210BF39200CB0CF4 /* enterstoryViewController.swift in Sources */,
-				DC220FA32113CCCA0021F11F /* DataService.swift in Sources */,
 				DC10BD5F20C63E5900EE4428 /* ViewController.swift in Sources */,
 				DC2DFC9F2101608700F4A491 /* donateViewController.swift in Sources */,
 				DCEE701F2102DE6F0018A29A /* superstoriesViewController.swift in Sources */,
-				DC254FE62118FBE700BFDB3E /* Stories.swift in Sources */,
+				DC0F4686218FEEEF00023534 /* storyTableViewCell.swift in Sources */,
 				DC254FE82118FBFD00BFDB3E /* Story.swift in Sources */,
 				DC76F61220CB1BEA003D512D /* shelterViewController.swift in Sources */,
 				DC10BD5D20C63E5900EE4428 /* AppDelegate.swift in Sources */,
 				DC76F61020CB1BCD003D512D /* donationViewController.swift in Sources */,
-				DC227120211529DC00AD6894 /* Survey.swift in Sources */,
 				DC2DEB562110F5B300BC6C59 /* donationMapViewController.swift in Sources */,
 				DC76F60A20CB1B76003D512D /* loginViewController.swift in Sources */,
 			);
@@ -601,6 +599,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23232LU5XG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/surveymonkey-ios-sdk",
+				);
 				INFOPLIST_FILE = "SAY Houston/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -621,6 +623,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23232LU5XG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/surveymonkey-ios-sdk",
+				);
 				INFOPLIST_FILE = "SAY Houston/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

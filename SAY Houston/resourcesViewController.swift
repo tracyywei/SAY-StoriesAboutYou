@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class resourcesViewController: UIViewController {
 
+    @IBAction func logout(_ sender: Any) {
+        try! Auth.auth().signOut()
+        self.dismiss(animated: false, completion: nil)    }
+    
     @IBAction func donorTapped(_ sender: Any) {
         guard let url = URL(string: "https://donorhouston.guidestar.org/") else {
             return //be safe

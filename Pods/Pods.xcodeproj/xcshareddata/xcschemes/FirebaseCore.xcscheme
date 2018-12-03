@@ -52,20 +52,10 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <RemoteRunnable
-         runnableDebuggingMode = "1"
-         BundleIdentifier = "Game-Changers.SAY-Houston"
-         RemotePath = "/Users/tracywei/Library/Developer/CoreSimulator/Devices/7C30A55F-DFFB-4274-B526-7546B4EBF836/data/Containers/Bundle/Application/6365D360-0F22-4F20-8A30-943039007035/SAY Houston.app">
-      </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "28A0A585DD41A5F02BDE8ADE4AF4F86B"
-            BuildableName = "FirebaseCore.framework"
-            BlueprintName = "FirebaseCore"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      <PathRunnable
+         runnableDebuggingMode = "0"
+         FilePath = "/&lt;placeholder&gt;">
+      </PathRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

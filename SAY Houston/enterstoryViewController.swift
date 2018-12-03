@@ -2,21 +2,35 @@
 //  enterstoryViewController.swift
 //  SAY Houston
 //
-//  Created by Tracy Wei on 7/27/18.
+//  Created by Tracy Wei on 11/3/18.
 //  Copyright © 2018 Game Changers. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import Firebase
 
 class enterstoryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        disasterPicker.delegate = self
+        disasterPicker.dataSource = self
+        self.hideKeyboardWhenTappedAround()
+        // Do any additional setup after loading the view.
+        
+    }
+   
+    @IBAction func cancelLeave(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBOutlet weak var zipcode: UITextField!
+    @IBOutlet weak var story: UITextView!
     
-    @IBOutlet weak var picker: UIPickerView!
-    @IBOutlet weak var zipcodeField: UITextField!
-    @IBOutlet weak var storyField: UITextView!
+
     
-    
-    let options = ["Hurricane Harvey", "Hurricane Irma"]
+    @IBOutlet weak var disasterPicker: UIPickerView!
+    let options = ["* Choose a disaster *", "Hurricane Harvey", "Hurricane Florence"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -29,70 +43,59 @@ class enterstoryViewController: UIViewController, UIPickerViewDelegate, UIPicker
         return options[row]
     }
     
-   var currentUsername = ""
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        picker.delegate = self
-        picker.dataSource = self
-        
-        DataService.dataService.CURRENT_USER_REF.observeEventType(FEventType.Value, withBlock: { snapshot in
-            
-            let currentUser = snapshot.value.objectForKey("username") as! String
-            
-            print("Username: \(currentUser)")
-            self.currentUsername = currentUser
-        }, withCancelBlock: { error in
-            print(error.description)
-        })
-        
-        
-        
-        
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    @IBAction func backStories(_ sender: Any) {
-         dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func saveStory(_ sender: Any) {
-        let storyText = storyField.text
-        
-        if storyText != "" {
-            
-            // Build the new Joke.
-            // AnyObject is needed because of the votes of type Int.
-            
-            let newStory: Dictionary<String, AnyObject> = [
-                "storyText": storyText!,
-                "likes": 0,
-                "author": currentUsername
-            ]
-            
-            // Send it over to DataService to seal the deal.
-            
-            DataService.dataService.createNewStory(newStory)
-            
-            if let navController = self.navigationController {
-                navController.popViewController(animated: true)
-            }
+    // save the disaster string
+    var disaster = ""
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if(row == 1){
+            disaster = options[1]
+        }
+        else if(row == 2){
+            disaster = options[2]
+        }
+        else if (row == 0){
+            disaster = options[0]
         }
     }
     
+    
+    
+    
+    @IBAction func saveStory(_ sender: Any) {
+        
+        if disaster != options[0] {
+            
+        // Firebase code
+        var ref: DatabaseReference!
+        
+        ref = Database.database().reference()
 
+        let storyRef = ref.child("stories").childByAutoId()
+        
+        // what information is saved
+        let storyObject = [
+            "story": story.text,
+            "zipcode": zipcode.text as Any,
+            "disaster": disaster,
+            "hearts": 0,
+            "timestamp": [".sv":"timestamp"]
+        ] as [String:Any]
+        
+        storyRef.setValue(storyObject, withCompletionBlock: { error, ref in
+            if error == nil {
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+        })
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
+        // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
     */
