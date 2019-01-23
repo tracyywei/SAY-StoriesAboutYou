@@ -21,18 +21,15 @@ class ViewController: UIViewController {
     }
    
     
-    
-    @IBAction func goLogin(_ sender: Any) {
-        performSegue(withIdentifier: "enterlog", sender: self)
+// Segues performed for each button
+    @IBAction func goLogin(_ sender: Any) {   // enter button
+        performSegue(withIdentifier: "enterHome", sender: self)
     }
     
     @IBAction func goCar(_ sender: Any) {
         performSegue(withIdentifier: "entercar", sender: self)
     }
     
-    @IBAction func goCreate(_ sender: Any) {
-        performSegue(withIdentifier: "entercreate", sender: self)
-    }
     @IBAction func goSuper(_ sender: Any) {
         performSegue(withIdentifier: "entersuper", sender: self)
     }
@@ -41,6 +38,7 @@ class ViewController: UIViewController {
     }
 }
 
+// When you tap outside of the keyboard, it disappears
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))

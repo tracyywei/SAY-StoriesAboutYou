@@ -41,6 +41,7 @@ class storyTableViewController: UITableViewController {
         
     }
     
+    // grouping all of the stories to be reloaded and displayed
     func observeStories() {
         let storiesRef = Database.database().reference().child("stories")
         
@@ -54,10 +55,11 @@ class storyTableViewController: UITableViewController {
                     let story = dict["story"] as? String,
                     let zipcode = dict["zipcode"] as? String,
                     let disaster = dict["disaster"] as? String,
-                    let hearts = dict["hearts"] as? Int,
-                    let timestamp = dict["timestamp"] as? Double {
-                    
-                    let story = Story(story: story, zipcode: zipcode, disaster: disaster, hearts:hearts, timestamp: timestamp)
+                    // let hearts = dict["hearts"] as? Int,
+                    let timestamp = dict["timestamp"] as? Double,
+                    let consent = dict["consent"] as? String
+                    {
+                    let story = Story(story: story, zipcode: zipcode, disaster: disaster, timestamp: timestamp, consent: consent)
                     tempStories.append(story)
                     
                 }
@@ -79,6 +81,9 @@ class storyTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // adding the stories to the tableview
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "storyTableViewCell", for: indexPath) as! storyTableViewCell
         let story: Story
         
@@ -89,7 +94,7 @@ class storyTableViewController: UITableViewController {
         cell.storyText.text = story.story
         cell.zipcodeText.text = story.zipcode
         cell.disasterText.text = story.disaster
-        cell.heartsCount.text = "\(story.hearts)"
+        // cell.heartsCount.text = "\(story.hearts)"
         
         
         return cell

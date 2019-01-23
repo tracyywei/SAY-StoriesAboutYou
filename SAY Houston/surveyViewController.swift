@@ -13,22 +13,21 @@ import FirebaseAuth
 class surveyViewController: UIViewController , WKNavigationDelegate {
     var webView: WKWebView!
     @IBOutlet weak var SurveyWebView: WKWebView!
-    
+
+    // loading WebView when screen initializes
     override func loadView() {
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
     }
 
+    // logs out user
     @IBAction func logout(_ sender: Any) {
         try! Auth.auth().signOut()
         self.dismiss(animated: false, completion: nil)    }
     
     
-    /* @IBAction func takeSurvey(_ sender: Any) {
-        taskViewController.delegate = self
-        present(taskViewController, animated: true, completion: nil)
-    }*/
+    // web page that will initialize
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -19,53 +19,55 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="456.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yIc-J1-qM8">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yIc-J1-qM8">
                         <rect key="frame" x="16" y="130" width="343" height="302"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        </variation>
                     </textView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Disaster" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNK-6y-BPg">
-                        <rect key="frame" x="20" y="78" width="314" height="29"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disaster" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNK-6y-BPg">
+                        <rect key="frame" x="20" y="87.5" width="314" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zipcode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQz-Ib-dUB">
-                        <rect key="frame" x="20" y="36" width="186" height="29"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zipcode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQz-Ib-dUB">
+                        <rect key="frame" x="20" y="36" width="314" height="34"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                        </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjf-jC-eJf">
-                        <rect key="frame" x="205" y="40" width="88" height="24"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EmptyHeart" translatesAutoresizingMaskIntoConstraints="NO" id="xxk-s3-cxL">
-                        <rect key="frame" x="295" y="23" width="64" height="59"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
                 </subviews>
                 <color key="backgroundColor" red="0.81523979319999995" green="0.92143570060000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="yIc-J1-qM8" secondAttribute="bottomMargin" constant="32.5" id="4hB-ax-MUG"/>
+                    <constraint firstAttribute="trailing" secondItem="GNK-6y-BPg" secondAttribute="trailingMargin" constant="49" id="7CW-Jv-sk4"/>
+                    <constraint firstItem="yIc-J1-qM8" firstAttribute="top" secondItem="GNK-6y-BPg" secondAttribute="bottom" constant="13.5" id="BNS-0F-QeN"/>
+                    <constraint firstItem="dQz-Ib-dUB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="4" id="Gk6-su-CES"/>
+                    <constraint firstItem="GNK-6y-BPg" firstAttribute="top" secondItem="dQz-Ib-dUB" secondAttribute="bottom" constant="17.5" id="Gmh-Tj-wZQ"/>
+                    <constraint firstItem="yIc-J1-qM8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="bPt-jV-FOE"/>
+                    <constraint firstAttribute="trailing" secondItem="dQz-Ib-dUB" secondAttribute="trailingMargin" constant="49" id="fHm-Rt-bxc"/>
+                    <constraint firstItem="GNK-6y-BPg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="4" id="fsv-LI-VPi"/>
+                    <constraint firstAttribute="trailing" secondItem="yIc-J1-qM8" secondAttribute="trailingMargin" constant="24" id="sI3-pm-Rxr"/>
+                    <constraint firstItem="dQz-Ib-dUB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="36" id="w5d-hO-7bV"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="disasterText" destination="GNK-6y-BPg" id="GeN-pz-Yiy"/>
-                <outlet property="heartImage" destination="xxk-s3-cxL" id="myl-it-0yG"/>
-                <outlet property="heartsCount" destination="Zjf-jC-eJf" id="ZzP-Cy-wmk"/>
                 <outlet property="storyText" destination="yIc-J1-qM8" id="r5j-3u-hwL"/>
                 <outlet property="zipcodeText" destination="dQz-Ib-dUB" id="4jj-ER-WvQ"/>
             </connections>
             <point key="canvasLocation" x="181.59999999999999" y="339.58020989505252"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="EmptyHeart" width="200" height="200"/>
-    </resources>
 </document>

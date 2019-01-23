@@ -37,7 +37,7 @@ class storyTableViewCell: UITableViewCell {
         storyText.text = story.story
         zipcodeText.text = story.zipcode
         disasterText.text = story.disaster
-        heartsCount.text = "\(story.hearts)"
+        // heartsCount.text = "\(story.hearts)"
         
     
 }

@@ -7,13 +7,34 @@
 //
 
 import UIKit
+import WebKit
 
 class superstoriesViewController: UIViewController {
-
+    
+    @IBOutlet var WebView: WKWebView!
+    
+    // webview loads
+    override func loadView() {
+        WebView = WKWebView()
+        WebView.navigationDelegate = self as? WKNavigationDelegate
+        view = WebView
+    }
+    @IBAction func logout(_ sender: Any) {
+        performSegue(withIdentifier: "storyLogout", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
         // Do any additional setup after loading the view.
+        // 1
+        let url = URL(string: "https://docs.google.com/spreadsheets/d/1k1c_OQPb1fBTqzXOWTRhh40X2U5sUPXiJaMpEEveBUw/edit?usp=sharing")!
+    WebView.load(URLRequest(url: url))
+        
+    }
+    
+    func WebView(_ WebView: WKWebView, didFinish navigation: WKNavigation!) {
+        title = WebView.title
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,3 +54,4 @@ class superstoriesViewController: UIViewController {
     */
 
 }
+

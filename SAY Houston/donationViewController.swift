@@ -11,10 +11,12 @@ import FirebaseAuth
 
 class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
 
+    // log out user
     @IBAction func logout(_ sender: Any) {
         try! Auth.auth().signOut()
         self.dismiss(animated: false, completion: nil)    }
     
+    // defining UI elements
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label3: UILabel!
@@ -25,6 +27,7 @@ class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var mylabel: UILabel!
     @IBOutlet weak var pickerDonate: UIPickerView!
     
+    // set options in picker
     let options = ["* Pick a category *", "Food", "Water", "Clothes", "Baby Supplies", "Women Supplies", "Money", "Medical Supplies", "Pet Supplies", "Household Items", "Volunteer Opportunities"]
     
     
@@ -39,39 +42,15 @@ class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         return options[row]
     }
     
+    // var used to identify category (used later on to transfer data to map)
     var selectedOption : Int = 0
     
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        
-        
-        let myView = UIView(frame: CGRect(x: 0, y: 350, width: 200, height: 21))
-        self.view.addSubview(myView)
-        
-        
-       /* let mylabel = UILabel()
-        mylabel.frame = CGRect(x: 0, y: 350, width: 200, height: 21)*/
-        
-        
-        /* let label2 = UILabel(frame: CGRect(x: 0, y: 350, width: 200, height: 21))
-        let label3 = UILabel(frame: CGRect(x: 0, y: 350, width: 200, height: 21))
-        let label4 = UILabel(frame: CGRect(x: 0, y: 350, width: 200, height: 21))
-        let label5 = UILabel(frame: CGRect(x: 0, y: 350, width: 200, height: 21)) */
-        
+        // if/else matches selected category with its apprioriate info
         
         if(row == 1){
-            /*mylabel.center = CGPoint(x: 190, y: 350)
-            mylabel.textAlignment = .center
-            mylabel.text = "Food"
-            mylabel.font = UIFont.systemFont(ofSize: 21)
-            mylabel.isHidden = false
-            /*label2.isHidden = true
-            label3.isHidden = true
-            label4.isHidden = true*/
-            
-            self.view.addSubview(mylabel)*/
-            
            mylabel.text = "Food"
             label1.text = "- Houston Food Bank"
             label2.text = "- Interfaith Ministries Food Pantry"
@@ -84,20 +63,6 @@ class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             
         }
         else if(row == 2){
-            /*label2.isHidden = false
-            label2.center = CGPoint(x: 190, y: 350)
-            label2.textAlignment = .center
-            label2.text = "Water"
-            label2.font = UIFont.systemFont(ofSize: 21)
-            label.isHidden = true
-            label3.isHidden = true
-            label4.isHidden = true*/
-            /*mylabel.center = CGPoint(x: 190, y: 350)
-            mylabel.textAlignment = .center
-            mylabel.text = "Water"
-            mylabel.font = UIFont.systemFont(ofSize: 21)
-            
-            self.view.addSubview(mylabel)*/
             
             mylabel.text = "Water"
             
@@ -111,12 +76,6 @@ class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             selectedOption = 2
         }
         else if(row == 3){
-            
-            /*label3.center = CGPoint(x: 190, y: 350)
-            label3.textAlignment = .center
-            label3.text = "Clothes"
-            label3.font = UIFont.systemFont(ofSize: 21)
-            self.view.addSubview(label3)*/
             mylabel.text = "Clothes"
             label1.text = "- Baker Ripley"
             label2.text = "- Houston Children's Charity"
@@ -128,12 +87,6 @@ class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             selectedOption = 3
         }
         else if(row == 4){
-            
-            /*label4.center = CGPoint(x: 190, y: 350)
-            label4.textAlignment = .center
-            label4.text = "Baby Supplies"
-            label4.font = UIFont.systemFont(ofSize: 21)
-            self.view.addSubview(label4)*/
             mylabel.text = "Baby Supplies"
             label1.text = "- Houston Diaper Bank"
             label2.text = "- LIFE Houston"
@@ -145,12 +98,6 @@ class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             selectedOption = 4
         }
         else if(row == 5){
-            
-            /*label5.center = CGPoint(x: 190, y: 350)
-            label5.textAlignment = .center
-            label5.text = "Women Supplies"
-            label5.font = UIFont.systemFont(ofSize: 21)
-            self.view.addSubview(label5)*/
             mylabel.text = "Women Supplies"
             label1.text = "- PennyWise"
             label2.text = "- Dress for Success"
@@ -240,9 +187,11 @@ class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // enables user to use picker
         pickerDonate.delegate = self
         pickerDonate.dataSource = self
         
+        // sets labels to blank (visiblity = false)
         mylabel.text = ""
         label1.text = ""
         label2.text = ""
@@ -260,8 +209,11 @@ class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     var categoryName = ""
+    
+    // user clicks on see map button
     @IBAction func seeMap(_ sender: UIButton) {
         
+        // notification telling user to choose a category
         let alert2 = UIAlertController(title: "ERROR", message: "Please make sure you have selected a category before viewing the map", preferredStyle: UIAlertControllerStyle.alert)
         alert2.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             switch action.style{
@@ -277,6 +229,7 @@ class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 
             }}))
         
+        // if/else uses the category number to match with the category name, which will be transferred to the map screen
         if(self.selectedOption == 1){
             self.categoryName = "Food"
         }
@@ -336,11 +289,6 @@ class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 }}))
             self.present(alert2, animated: true, completion: nil)        }
         else if(self.selectedOption == 11){
-            /*let alert = UIAlertController(title: "ERROR", message: "Please make sure you have selected a category before viewing the map", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Ok", style: .default, handler: nil) {
-                (action)in print("Ok") }
-            alert.addAction(action)
-            present(alert, animated: true, completion: nil)*/
             
             
             self.present(alert2, animated: true, completion: nil)
@@ -348,55 +296,19 @@ class donationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         else {
             self.present(alert2, animated: true, completion: nil)
         }
+        // goes to map screen
          performSegue(withIdentifier: "seeMap", sender: self)
         
     }
     
+    // transferring data (category) to next screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any!)
     {
         let vc = segue.destination as! donationMapViewController
         vc.finalCategory = self.categoryName
     }
         
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any!)
-    {
-        if (segue.identifier == "seeMap"){
-        
-            let category = segue.destination as! donationMapViewController
-            
-            if(self.selectedOption == 1){
-           
-            category.title = "Food"
-            }
-            else if(self.selectedOption == 2){
-                category.title = "Water"
-            }
-            else if(self.selectedOption == 3){
-                category.title = "Clothes"
-            }
-            else if(self.selectedOption == 4){
-                category.title = "Baby Supplies"
-            }
-            else if(self.selectedOption == 5){
-                category.title = "Women Supplies"
-            }
-            else if(self.selectedOption == 6){
-                category.title = "Money"
-            }
-            else if(self.selectedOption == 7){
-                category.title = "Medical Supplies"
-            }
-            else if(self.selectedOption == 8){
-                category.title = "Pet Supplies"
-            }
-            else if(self.selectedOption == 9){
-                category.title = "Household Items"
-            }
-            else if(self.selectedOption == 10){
-                category.title = "Volunteer Opportunities"
-            }
-        }
-    }*/
+   
     
     
     

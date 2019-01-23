@@ -17,6 +17,9 @@ class supersurveyViewController: UIViewController, WKNavigationDelegate {
         webView.navigationDelegate = self
         view = webView
     }
+    @IBAction func logOut(_ sender: Any) {
+        performSegue(withIdentifier: "surveyLogout", sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +29,9 @@ class supersurveyViewController: UIViewController, WKNavigationDelegate {
         webView.load(URLRequest(url: url))
         
         // 2
-        let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
+        /* let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
         toolbarItems = [refresh]
-        navigationController?.isToolbarHidden = false
+        navigationController?.isToolbarHidden = false */
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {

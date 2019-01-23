@@ -9,21 +9,24 @@
 import Foundation
 import Firebase
 
+// base/format of the story that will be saved to firebase 
+
 class Story {
     
     var story:String
     var zipcode: String
     var disaster: String
-    var hearts: Int
+    // var hearts: Int
     var timestamp:Double
+    var consent: String
     
-    init(story:String, zipcode:String,disaster:String, hearts: Int, timestamp:Double) {
+    init(story:String, zipcode:String,disaster:String, timestamp:Double, consent:String) {
         self.story = story
         self.zipcode = zipcode
         self.disaster = disaster
-        self.hearts = hearts
+        // self.hearts = hearts
         self.timestamp = timestamp
-        
+        self.consent = consent
     }
     
 }

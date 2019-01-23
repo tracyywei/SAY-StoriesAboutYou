@@ -10,7 +10,6 @@
 		96BCC6E8ADBBBF10F59A3E5C /* Pods_SAY_Houston.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9AC262B0DC65F654E4CBB2 /* Pods_SAY_Houston.framework */; };
 		DC0F4686218FEEEF00023534 /* storyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0F4684218FEEEF00023534 /* storyTableViewCell.swift */; };
 		DC0F4687218FEEEF00023534 /* storyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC0F4685218FEEEF00023534 /* storyTableViewCell.xib */; };
-		DC107408218D379900FB8E30 /* LikesControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC107407218D379900FB8E30 /* LikesControl.swift */; };
 		DC10BD5D20C63E5900EE4428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10BD5C20C63E5900EE4428 /* AppDelegate.swift */; };
 		DC10BD5F20C63E5900EE4428 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10BD5E20C63E5900EE4428 /* ViewController.swift */; };
 		DC10BD6220C63E5900EE4428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC10BD6020C63E5900EE4428 /* Main.storyboard */; };
@@ -19,20 +18,17 @@
 		DC10BD7220C63E5B00EE4428 /* SAY_HoustonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10BD7120C63E5B00EE4428 /* SAY_HoustonTests.swift */; };
 		DC10BD7D20C63E5B00EE4428 /* SAY_HoustonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10BD7C20C63E5B00EE4428 /* SAY_HoustonUITests.swift */; };
 		DC134FB6218E901B003DCA0E /* enterstoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC134FB5218E901B003DCA0E /* enterstoryViewController.swift */; };
-		DC20069021129E1600C61384 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC20068F21129E1600C61384 /* GoogleService-Info.plist */; };
 		DC254FE82118FBFD00BFDB3E /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC254FE72118FBFD00BFDB3E /* Story.swift */; };
 		DC2DEB562110F5B300BC6C59 /* donationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DEB552110F5B300BC6C59 /* donationMapViewController.swift */; };
 		DC2DFC9D2101606A00F4A491 /* supersignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DFC9C2101606A00F4A491 /* supersignViewController.swift */; };
-		DC2DFC9F2101608700F4A491 /* donateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2DFC9E2101608700F4A491 /* donateViewController.swift */; };
 		DC2F33C0210BF54700CB0CF4 /* storyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2F33BF210BF54700CB0CF4 /* storyTableViewController.swift */; };
 		DC2F33C4210C040600CB0CF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2F33C3210C040600CB0CF4 /* Constants.swift */; };
-		DC76F60A20CB1B76003D512D /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76F60920CB1B76003D512D /* loginViewController.swift */; };
-		DC76F60C20CB1B97003D512D /* createaccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76F60B20CB1B97003D512D /* createaccountViewController.swift */; };
 		DC76F61020CB1BCD003D512D /* donationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76F60F20CB1BCD003D512D /* donationViewController.swift */; };
 		DC76F61220CB1BEA003D512D /* shelterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76F61120CB1BEA003D512D /* shelterViewController.swift */; };
 		DC76F61420CB1C08003D512D /* resourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76F61320CB1C08003D512D /* resourcesViewController.swift */; };
 		DC76F61620CB1C82003D512D /* aboutcarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76F61520CB1C82003D512D /* aboutcarViewController.swift */; };
 		DCBCEDA5210BBD7700DB5995 /* surveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBCEDA4210BBD7700DB5995 /* surveyViewController.swift */; };
+		DCDB52AE21B7837B00867106 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCDB52AD21B7837B00867106 /* GoogleService-Info.plist */; };
 		DCEE701F2102DE6F0018A29A /* superstoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE701E2102DE6F0018A29A /* superstoriesViewController.swift */; };
 		DCEE70212102DE8B0018A29A /* supersurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE70202102DE8B0018A29A /* supersurveyViewController.swift */; };
 /* End PBXBuildFile section */
@@ -73,7 +69,6 @@
 		A77E2DD04E53820BD276356E /* Pods-SAY Houston.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAY Houston.release.xcconfig"; path = "Pods/Target Support Files/Pods-SAY Houston/Pods-SAY Houston.release.xcconfig"; sourceTree = "<group>"; };
 		DC0F4684218FEEEF00023534 /* storyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyTableViewCell.swift; sourceTree = "<group>"; };
 		DC0F4685218FEEEF00023534 /* storyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = storyTableViewCell.xib; sourceTree = "<group>"; };
-		DC107407218D379900FB8E30 /* LikesControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesControl.swift; sourceTree = "<group>"; };
 		DC10BD5920C63E5900EE4428 /* SAY Houston.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SAY Houston.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC10BD5C20C63E5900EE4428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC10BD5E20C63E5900EE4428 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,20 +83,17 @@
 		DC10BD7C20C63E5B00EE4428 /* SAY_HoustonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAY_HoustonUITests.swift; sourceTree = "<group>"; };
 		DC10BD7E20C63E5B00EE4428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC134FB5218E901B003DCA0E /* enterstoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enterstoryViewController.swift; sourceTree = "<group>"; };
-		DC20068F21129E1600C61384 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DC254FE72118FBFD00BFDB3E /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		DC2DEB552110F5B300BC6C59 /* donationMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = donationMapViewController.swift; sourceTree = "<group>"; };
 		DC2DFC9C2101606A00F4A491 /* supersignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = supersignViewController.swift; sourceTree = "<group>"; };
-		DC2DFC9E2101608700F4A491 /* donateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = donateViewController.swift; sourceTree = "<group>"; };
 		DC2F33BF210BF54700CB0CF4 /* storyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyTableViewController.swift; sourceTree = "<group>"; };
 		DC2F33C3210C040600CB0CF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		DC76F60920CB1B76003D512D /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
-		DC76F60B20CB1B97003D512D /* createaccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createaccountViewController.swift; sourceTree = "<group>"; };
 		DC76F60F20CB1BCD003D512D /* donationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = donationViewController.swift; sourceTree = "<group>"; };
 		DC76F61120CB1BEA003D512D /* shelterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shelterViewController.swift; sourceTree = "<group>"; };
 		DC76F61320CB1C08003D512D /* resourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resourcesViewController.swift; sourceTree = "<group>"; };
 		DC76F61520CB1C82003D512D /* aboutcarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutcarViewController.swift; sourceTree = "<group>"; };
 		DCBCEDA4210BBD7700DB5995 /* surveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surveyViewController.swift; sourceTree = "<group>"; };
+		DCDB52AD21B7837B00867106 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCEE701E2102DE6F0018A29A /* superstoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = superstoriesViewController.swift; sourceTree = "<group>"; };
 		DCEE70202102DE8B0018A29A /* supersurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = supersurveyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,28 +158,24 @@
 			isa = PBXGroup;
 			children = (
 				DC10BD5C20C63E5900EE4428 /* AppDelegate.swift */,
-				DC10BD5E20C63E5900EE4428 /* ViewController.swift */,
 				DC10BD6020C63E5900EE4428 /* Main.storyboard */,
 				DC10BD6320C63E5B00EE4428 /* Assets.xcassets */,
 				DC10BD6520C63E5B00EE4428 /* LaunchScreen.storyboard */,
-				DC20068F21129E1600C61384 /* GoogleService-Info.plist */,
 				DC10BD6820C63E5B00EE4428 /* Info.plist */,
-				DC76F60920CB1B76003D512D /* loginViewController.swift */,
-				DC76F60B20CB1B97003D512D /* createaccountViewController.swift */,
+				DCDB52AD21B7837B00867106 /* GoogleService-Info.plist */,
+				DC10BD5E20C63E5900EE4428 /* ViewController.swift */,
 				DCBCEDA4210BBD7700DB5995 /* surveyViewController.swift */,
 				DC76F60F20CB1BCD003D512D /* donationViewController.swift */,
 				DC76F61120CB1BEA003D512D /* shelterViewController.swift */,
 				DC76F61320CB1C08003D512D /* resourcesViewController.swift */,
 				DC76F61520CB1C82003D512D /* aboutcarViewController.swift */,
 				DC2DFC9C2101606A00F4A491 /* supersignViewController.swift */,
-				DC2DFC9E2101608700F4A491 /* donateViewController.swift */,
 				DCEE701E2102DE6F0018A29A /* superstoriesViewController.swift */,
 				DCEE70202102DE8B0018A29A /* supersurveyViewController.swift */,
 				DC2F33BF210BF54700CB0CF4 /* storyTableViewController.swift */,
 				DC2F33C3210C040600CB0CF4 /* Constants.swift */,
 				DC2DEB552110F5B300BC6C59 /* donationMapViewController.swift */,
 				DC254FE72118FBFD00BFDB3E /* Story.swift */,
-				DC107407218D379900FB8E30 /* LikesControl.swift */,
 				DC134FB5218E901B003DCA0E /* enterstoryViewController.swift */,
 				DC0F4684218FEEEF00023534 /* storyTableViewCell.swift */,
 				DC0F4685218FEEEF00023534 /* storyTableViewCell.xib */,
@@ -330,8 +318,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC10BD6720C63E5B00EE4428 /* LaunchScreen.storyboard in Resources */,
-				DC20069021129E1600C61384 /* GoogleService-Info.plist in Resources */,
 				DC10BD6420C63E5B00EE4428 /* Assets.xcassets in Resources */,
+				DCDB52AE21B7837B00867106 /* GoogleService-Info.plist in Resources */,
 				DC10BD6220C63E5900EE4428 /* Main.storyboard in Resources */,
 				DC0F4687218FEEEF00023534 /* storyTableViewCell.xib in Resources */,
 			);
@@ -408,13 +396,10 @@
 				DC2F33C4210C040600CB0CF4 /* Constants.swift in Sources */,
 				DCEE70212102DE8B0018A29A /* supersurveyViewController.swift in Sources */,
 				DC2F33C0210BF54700CB0CF4 /* storyTableViewController.swift in Sources */,
-				DC107408218D379900FB8E30 /* LikesControl.swift in Sources */,
-				DC76F60C20CB1B97003D512D /* createaccountViewController.swift in Sources */,
 				DC2DFC9D2101606A00F4A491 /* supersignViewController.swift in Sources */,
 				DC76F61420CB1C08003D512D /* resourcesViewController.swift in Sources */,
 				DC76F61620CB1C82003D512D /* aboutcarViewController.swift in Sources */,
 				DC10BD5F20C63E5900EE4428 /* ViewController.swift in Sources */,
-				DC2DFC9F2101608700F4A491 /* donateViewController.swift in Sources */,
 				DCEE701F2102DE6F0018A29A /* superstoriesViewController.swift in Sources */,
 				DC0F4686218FEEEF00023534 /* storyTableViewCell.swift in Sources */,
 				DC254FE82118FBFD00BFDB3E /* Story.swift in Sources */,
@@ -422,7 +407,6 @@
 				DC10BD5D20C63E5900EE4428 /* AppDelegate.swift in Sources */,
 				DC76F61020CB1BCD003D512D /* donationViewController.swift in Sources */,
 				DC2DEB562110F5B300BC6C59 /* donationMapViewController.swift in Sources */,
-				DC76F60A20CB1B76003D512D /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

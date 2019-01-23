@@ -15,6 +15,7 @@ final class shelterAnnotation: NSObject, MKAnnotation {
     var title: String?
     var subtitle: String?
     
+    // format for information of each point initializing
     init(coordinate: CLLocationCoordinate2D, title: String?, subtitle: String?){
         self.coordinate = coordinate
         self.title = title
@@ -24,6 +25,7 @@ final class shelterAnnotation: NSObject, MKAnnotation {
         
     }
     
+    // how much the initial map view will cover
     var region: MKCoordinateRegion {
         let span = MKCoordinateSpan(latitudeDelta: 1.6, longitudeDelta: 1.6)
         return MKCoordinateRegion(center: coordinate, span: span)
@@ -38,6 +40,8 @@ class shelterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // defining points and adding text
         
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         let nrgcenterCoordinate = CLLocationCoordinate2DMake(29.6847, -95.4107)
@@ -283,6 +287,9 @@ class shelterViewController: UIViewController {
         let kempnerhighschoolCoordinate = CLLocationCoordinate2DMake( 29.644030, -95.646030)
         let kempnerhighschoolAnnotation = shelterAnnotation(coordinate:  kempnerhighschoolCoordinate, title: "Kempner High School", subtitle: "14777 Voss Rd, Sugar Land, TX" + "\n" + "CLOSED")
         
+        
+        // adding points to map
+        
         mapView.addAnnotation(nrgcenterAnnotation)
         mapView.addAnnotation(lakewoodchurchAnnotation)
         mapView.addAnnotation(georgerbrownconventioncenterAnnotation)
@@ -359,7 +366,7 @@ class shelterViewController: UIViewController {
         mapView.addAnnotation(kempnerhighschoolAnnotation)
 
         
-        
+        // where the map is centered around
         mapView.setRegion(nrgcenterAnnotation.region, animated: true)
         
         

@@ -23,16 +23,21 @@ class supersignViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func closeSuper(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func goHome(_ sender: Any) {
+        performSegue(withIdentifier: "superToHome", sender: self)
     }
     
     @IBAction func goSuperSee(_ sender: Any) {
+        // user authenication
+        // user: childrenatrisk
+        // pass: childrenatrisk
         
-        if(superUser.text == "gamechangers" && superPass.text == "gamechangers"){
+        if(superUser.text == "childrenatrisk" && superPass.text == "childrenatrisk"){
         performSegue(withIdentifier: "entersupersee", sender: self)
         }
         else{
+            // if authenication fails, notification appears
+            
             let alert2 = UIAlertController(title: "ERROR", message: "Incorrect username or password. Please try again.", preferredStyle: UIAlertControllerStyle.alert)
             alert2.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                 switch action.style{
@@ -51,9 +56,6 @@ class supersignViewController: UIViewController {
         }
     }
     
-    @IBAction func goBackLogin(_ sender: Any) {
-        performSegue(withIdentifier: "superGoLogin", sender: self)
-    }
     /*
     // MARK: - Navigation
 

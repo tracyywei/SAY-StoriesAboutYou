@@ -14,6 +14,8 @@ class resourcesViewController: UIViewController {
     @IBAction func logout(_ sender: Any) {
         try! Auth.auth().signOut()
         self.dismiss(animated: false, completion: nil)    }
+   
+    // when tapped, buttons lead to external safari pages (hyperlinks)
     
     @IBAction func donorTapped(_ sender: Any) {
         guard let url = URL(string: "https://donorhouston.guidestar.org/") else {
@@ -72,10 +74,6 @@ class resourcesViewController: UIViewController {
         
     }
     
-    @IBAction func didTapSketch( sender: AnyObject) {
-        UIApplication.shared.open(URL(string: "https://sketch-city.github.io/harvey-needs/")!  as URL, options:[:], completionHandler:nil)
-        
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
